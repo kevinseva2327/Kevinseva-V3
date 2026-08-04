@@ -672,6 +672,10 @@ p{
     z-index: 5;
     padding-top: 180px;
 }
+#welcome-section h2{
+    margin-top: -70px;
+    margin-bottom: 20px;
+}
 #welcome-section p{
 
     color:#ffffff;
