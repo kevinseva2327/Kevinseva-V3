@@ -1,0 +1,1698 @@
+/*==================================================
+    EVANGELLA ANNE ♥ KEVIN PONNIAH
+    ENGAGEMENT INVITATION
+==================================================*/
+
+/*=========================
+    GOOGLE VARIABLES
+=========================*/
+
+:root{
+
+    --gold:#D4AF37;
+
+    --navy:#0F2D52;
+
+    --ivory:#F9F7F2;
+
+    --blush:#FCE8E6;
+
+    --sage:#EAF3EA;
+
+    --lavender:#EEE7F7;
+
+    --white:#FFFFFF;
+
+    --black:#222222;
+
+    --grey:#666666;
+
+    --shadow:0 12px 35px rgba(0,0,0,.18);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+
+}
+
+/*=========================
+    RESET
+=========================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--black);
+
+    background:var(--white);
+
+    overflow-x:hidden;
+
+}
+
+/*=========================
+    SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efefef;
+
+}
+
+/*=========================
+    SECTION
+=========================*/
+
+.page-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:70px 20px;
+
+}
+
+.section-container{
+
+    width:100%;
+
+    max-width:460px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*=========================
+    TYPOGRAPHY
+=========================*/
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3.4rem;
+
+    font-weight:400;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.5rem;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
+}
+
+h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.7rem;
+
+    margin-bottom:15px;
+
+}
+
+h4{
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:16px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    font-style:italic;
+
+    color:var(--grey);
+
+    margin-bottom:35px;
+
+}
+
+/*=========================
+    BUTTON
+=========================*/
+
+.primary-button{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.primary-button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.primary-button small{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:12px;
+
+    font-weight:400;
+
+}
+
+/*=========================
+    MUSIC BUTTON
+=========================*/
+
+#musicToggle{
+
+    position:fixed;
+
+    top:18px;
+
+    right:18px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    box-shadow:var(--shadow);
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    display:none;
+
+}
+
+/*=========================
+    BACK TO TOP
+=========================*/
+
+#backToTop{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:18px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:var(--shadow);
+
+}
+
+/*=========================
+    LOADING SCREEN
+=========================*/
+
+#loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#081B33;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+    transition:1s;
+
+}
+
+.loader{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    color:#ff5d7a;
+
+    animation:heartbeat 1.6s infinite;
+
+    margin-bottom:20px;
+
+}
+
+.loader h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2.7rem;
+
+    font-weight:400;
+
+}
+
+.loader span{
+
+    color:var(--gold);
+
+}
+
+.loader p{
+
+    margin-top:12px;
+
+    font-style:italic;
+
+}
+
+/*=========================
+    ANIMATIONS
+=========================*/
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================
+    MOBILE
+=========================*/
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:2.9rem;
+
+    }
+
+    h2{
+
+        font-size:2.2rem;
+
+    }
+
+    h3{
+
+        font-size:1.5rem;
+
+    }
+
+    p{
+
+        font-size:15px;
+
+    }
+
+    .primary-button{
+
+        width:100%;
+
+    }
+
+}
+/*==================================================
+    STEP 1
+    HERO SECTION
+==================================================*/
+
+#hero-section{
+
+    background:url("images/hands.jpeg") center center/cover no-repeat;
+
+    text-align:center;
+
+    color:var(--white);
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:1;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:auto;
+
+}
+
+.hero-title{
+
+    color:#ffffff;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.hero-heading{
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+    line-height:1.1;
+
+}
+
+.couple-name{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+}
+
+.couple-name .line1{
+
+    color:#ffffff;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+.couple-name .heart{
+
+    color:var(--gold);
+
+    font-size:2.6rem;
+
+    line-height:1;
+
+}
+
+.couple-name .line2{
+
+    color:#ffffff;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+.event-date{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-tagline{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2.2rem;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.hero-quote{
+
+    font-style:italic;
+
+    margin-bottom:40px;
+
+}
+
+#openInvitation{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================================
+    STEP 2
+    WELCOME
+==================================================*/
+
+#welcome-section{
+
+    background:url("images/couple.jpeg") center center/cover no-repeat;
+
+    color:#ffffff;
+
+    text-align:center;
+
+}
+
+.welcome-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(15,45,82,.68);
+
+    z-index:1;
+
+}
+
+#welcome-section .section-container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.welcome-name{
+
+    color:var(--gold);
+
+    margin-top:30px;
+
+}
+
+.welcome-name span{
+
+    color:#ff6b81;
+
+}
+
+/*==================================================
+    CLOUDS
+==================================================*/
+
+.cloud{
+
+    position:absolute;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:50px;
+
+    filter:blur(1px);
+
+    z-index:2;
+
+}
+
+.cloud::before,
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    background:inherit;
+
+    border-radius:50%;
+
+}
+
+.cloud-1{
+
+    width:120px;
+
+    height:40px;
+
+    top:12%;
+
+    left:-140px;
+
+    animation:cloudMove1 40s linear infinite;
+
+}
+
+.cloud-2{
+
+    width:160px;
+
+    height:55px;
+
+    top:28%;
+
+    left:-200px;
+
+    animation:cloudMove2 55s linear infinite;
+
+}
+
+.cloud-3{
+
+    width:100px;
+
+    height:35px;
+
+    top:45%;
+
+    left:-150px;
+
+    animation:cloudMove3 48s linear infinite;
+
+}
+
+.cloud::before{
+
+    width:40px;
+
+    height:40px;
+
+    top:-18px;
+
+    left:18px;
+
+}
+
+.cloud::after{
+
+    width:55px;
+
+    height:55px;
+
+    top:-25px;
+
+    right:18px;
+
+}
+
+@keyframes cloudMove1{
+
+    from{transform:translateX(0);}
+
+    to{transform:translateX(700px);}
+
+}
+
+@keyframes cloudMove2{
+
+    from{transform:translateX(0);}
+
+    to{transform:translateX(780px);}
+
+}
+
+@keyframes cloudMove3{
+
+    from{transform:translateX(0);}
+
+    to{transform:translateX(720px);}
+
+}
+
+/*==================================================
+    BIRDS
+==================================================*/
+
+.bird{
+
+    position:absolute;
+
+    font-size:24px;
+
+    color:#ffffff;
+
+    z-index:3;
+
+    opacity:.9;
+
+}
+
+.bird-1{
+
+    top:18%;
+
+    left:-40px;
+
+    animation:birdFly1 18s linear infinite;
+
+}
+
+.bird-2{
+
+    top:35%;
+
+    left:-70px;
+
+    animation:birdFly2 22s linear infinite;
+
+}
+
+@keyframes birdFly1{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(750px);
+
+    }
+
+}
+
+@keyframes birdFly2{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(820px);
+
+    }
+
+}
+
+/*==================================================
+    SPARKLES
+==================================================*/
+
+.sparkles span{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    background:#ffffff;
+
+    border-radius:50%;
+
+    animation:twinkle 3s infinite;
+
+}
+
+.sparkles span:nth-child(1){
+
+    top:18%;
+
+    left:20%;
+
+}
+
+.sparkles span:nth-child(2){
+
+    top:32%;
+
+    right:18%;
+
+}
+
+.sparkles span:nth-child(3){
+
+    bottom:28%;
+
+    left:28%;
+
+}
+
+.sparkles span:nth-child(4){
+
+    bottom:18%;
+
+    right:22%;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+}
+
+/*==================================================
+    SCROLL INDICATOR
+==================================================*/
+
+.scroll-down{
+
+    margin-top:45px;
+
+}
+
+.down-arrow{
+
+    font-size:34px;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+}
+/*==================================================
+    STEP 3
+    OUR FAMILIES
+==================================================*/
+
+#family-section{
+
+    background:var(--ivory);
+
+}
+
+.family-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:30px 20px;
+
+    margin:35px 0;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.family-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.family-photo{
+
+    width:230px;
+
+    height:300px;
+
+    margin:0 auto 25px;
+
+    padding:8px;
+
+    border:3px solid var(--gold);
+
+    border-radius:18px;
+
+    background:#ffffff;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+.family-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    display:block;
+
+}
+
+.family-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+.family-card h4{
+
+    margin-bottom:6px;
+
+}
+
+.family-divider{
+
+    text-align:center;
+
+    font-size:36px;
+
+    color:var(--gold);
+
+    margin:25px 0;
+
+}
+
+.family-message{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    font-style:italic;
+
+    color:var(--grey);
+
+}
+
+/*==================================================
+    STEP 4
+    EVENT DETAILS
+==================================================*/
+
+#event-section{
+
+    background:var(--blush);
+
+}
+
+.event-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    margin:35px 0;
+
+    box-shadow:var(--shadow);
+
+}
+
+.event-card h3{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    margin-bottom:12px;
+
+}
+
+.event-card h4{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:#444;
+
+}
+
+.event-card p{
+
+    margin-bottom:12px;
+
+}
+
+.map-frame{
+
+    margin-top:20px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.map-frame iframe{
+
+    width:100%;
+
+    height:260px;
+
+    border:0;
+
+    display:block;
+
+}
+
+.map-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.map-buttons a{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    padding:14px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.map-buttons a:first-child{
+
+    background:#4285F4;
+
+}
+
+.map-buttons a:last-child{
+
+    background:#33C15D;
+
+}
+
+.map-buttons a:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+    .family-photo{
+
+        width:190px;
+
+        height:250px;
+
+    }
+
+    .event-card{
+
+        padding:20px;
+
+    }
+
+    .map-frame iframe{
+
+        height:220px;
+
+    }
+
+    .map-buttons{
+
+        flex-direction:column;
+
+    }
+
+}
+/*==================================================
+    STEP 5
+    PROGRAMME SECTION
+==================================================*/
+
+#programme-section{
+
+    background:var(--sage);
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-top:40px;
+
+    padding-left:25px;
+
+    border-left:3px solid var(--gold);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:35px;
+
+    padding-left:25px;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-36px;
+
+    top:8px;
+
+    width:16px;
+
+    height:16px;
+
+    background:var(--gold);
+
+    border-radius:50%;
+
+    border:3px solid #fff;
+
+}
+
+.timeline-time{
+
+    display:inline-block;
+
+    background:var(--gold);
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.timeline-content{
+
+    background:#fff;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.timeline-content h3{
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+/*==================================================
+    STEP 6
+    COUNTDOWN
+==================================================*/
+
+#countdown-section{
+
+    background:linear-gradient(180deg,#FFD7C2,#F6C5C9,#EFAE92);
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.countdown-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.18);
+
+}
+
+#countdown-section .section-container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.countdown-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin:45px 0;
+
+}
+
+.count-box{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    padding:25px 10px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.count-box span{
+
+    display:block;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.count-box small{
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.countdown-message{
+
+    margin-top:20px;
+
+    font-style:italic;
+
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+    .timeline{
+
+        padding-left:18px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:18px;
+
+    }
+
+    .timeline-item::before{
+
+        left:-29px;
+
+    }
+
+    .count-box{
+
+        padding:20px 10px;
+
+    }
+
+    .count-box span{
+
+        font-size:2rem;
+
+    }
+
+}
+/*==================================================
+    STEP 7
+    CONTACT OUR FAMILIES
+==================================================*/
+
+#contact-section{
+
+    background:var(--lavender);
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.contact-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-card h3{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.contact-person{
+
+    padding:18px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.contact-person:last-child{
+
+    border-bottom:none;
+
+}
+
+.contact-person h4{
+
+    margin-bottom:8px;
+
+}
+
+.contact-person p{
+
+    margin-bottom:8px;
+
+    color:var(--grey);
+
+}
+
+.contact-person>a:first-of-type{
+
+    display:block;
+
+    color:var(--black);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.whatsapp-btn{
+
+    display:block;
+
+    text-align:center;
+
+    background:#25D366;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+    STEP 8
+    THANK YOU
+==================================================*/
+
+#thankyou-section{
+
+    background:linear-gradient(to bottom,#ffffff,#FFF9F0);
+
+    text-align:center;
+
+}
+
+#thankyou-section h2{
+
+    color:var(--gold);
+
+}
+
+#thankyou-section h3{
+
+    color:var(--gold);
+
+    margin:35px 0 20px;
+
+}
+
+#thankyou-section p{
+
+    color:#555;
+
+}
+
+.signature{
+
+    margin-top:45px;
+
+    padding-top:30px;
+
+    border-top:2px solid rgba(212,175,55,.3);
+
+}
+
+.signature p{
+
+    font-style:italic;
+
+    margin-bottom:10px;
+
+}
+
+.signature h2{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    color:#D4AF37;
+
+}
+
+.signature span{
+
+    color:#ff5d7a;
+
+    font-size:2rem;
+
+}
+
+    color:#ff5d7a;
+
+    padding:0 8px;
+
+}
+
+.signature h4{
+
+    color:var(--gold);
+
+    margin-top:12px;
+
+    font-style:italic;
+
+    font-weight:500;
+
+}
+
+/*==================================================
+    FINAL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+    .contact-card{
+
+        padding:20px;
+
+    }
+
+    .signature h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .whatsapp-btn{
+
+        width:100%;
+
+    }
+
+}
