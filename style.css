@@ -668,13 +668,27 @@ p{
 
 }
 #welcome-section .section-container{
+    position: relative;
+    z-index: 5;
+    padding-top: 180px;
+}
+#welcome-section p{
 
-    position:relative;
+    color:#ffffff;
 
-    z-index:5;
+    text-shadow:0 3px 10px rgba(0,0,0,.9);
+
+    line-height:2;
+
+    margin-bottom:30px;
 
 }
 
+#welcome-section p:nth-of-type(2){
+
+    margin-top:90px;
+
+}
 .welcome-name{
 
     color:var(--gold);
