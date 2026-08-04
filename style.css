@@ -683,7 +683,13 @@ p{
     margin-bottom:30px;
 
 }
+#welcome-section h1{
+    margin-top: -70px;
+}
 
+#welcome-section p:first-of-type{
+    margin-top: -20px;
+}
 #welcome-section p:nth-of-type(2){
 
     margin-top:90px;
