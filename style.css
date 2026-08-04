@@ -630,7 +630,7 @@ p{
 
 #welcome-section{
 
-    background:url("images/couple.jpeg") center center/cover no-repeat;
+    background:url(couple.jpeg") center center/cover no-repeat;
 
     color:#ffffff;
 
