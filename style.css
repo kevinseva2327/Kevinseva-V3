@@ -655,10 +655,15 @@ p{
 }
 .welcome-overlay{
 
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.70);
+
     z-index:1;
 
 }
-
 #welcome-section .section-container{
 
     position:relative;
