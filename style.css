@@ -659,7 +659,10 @@ p{
 
     inset:0;
 
-    background:rgba(0,0,0,.70);
+    background:linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.60)
+    );
 
     z-index:1;
 
@@ -1708,5 +1711,45 @@ p{
         width:100%;
 
     }
+
+}
+/* ===== WELCOME TEXT REDESIGN ===== */
+
+#welcome-section h2,
+#welcome-section h3{
+
+    color:#FFD700;
+
+    text-shadow:0 4px 12px rgba(0,0,0,.9);
+
+}
+
+#welcome-section p{
+
+    color:#FFFFFF;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.9);
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.welcome-name{
+
+    color:#FFE082;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    text-shadow:0 4px 12px rgba(0,0,0,.9);
+
+}
+
+.welcome-name span{
+
+    color:#FF5E8A;
 
 }
