@@ -9,7 +9,7 @@
 
 const body = document.body;
 
-const loadingScreen = document.getElementById("loading-screen");
+const loadingScreen = document.getElementById("cover");
 
 const openInvitation = document.getElementById("openInvitation");
 
