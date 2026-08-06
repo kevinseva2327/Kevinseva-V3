@@ -39,15 +39,15 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loadingScreen.style.opacity = "0";
+    loadingScreen.style.opacity = "0";
 
-        setTimeout(() => {
+    setTimeout(() => {
 
-            loadingScreen.style.display = "none";
+        loadingScreen.style.display = "none";
 
-        },1000);
+    },1000);
 
-    },1500);
+},2000);
 
 });
 
