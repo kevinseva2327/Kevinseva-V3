@@ -96,23 +96,14 @@ body{
 =========================*/
 
 .page-section{
-
     position:relative;
-
-    min-height:100vh;
-
+    min-height:100svh;
     width:100%;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
-    padding:70px 20px;
-
+    padding:20px;
 }
 
 .section-container{
@@ -481,11 +472,10 @@ p{
 .hero-content{
     position: relative;
     z-index: 5;
-    width: 100%;
-    max-width: 430px;
-    margin: auto;
-    padding-top: 20px;
-    transform: translateY(-60px);
+    width: min(92%, 430px);
+    margin: 0 auto;
+    padding: 80px 15px 40px;
+    transform: none;
 }
 
 .hero-title{
@@ -1852,4 +1842,28 @@ p{
     display:block;
     margin:0 auto 20px;
     filter:drop-shadow(0 0 12px rgba(212,175,55,.4));
+}
+@media (max-width: 480px){
+
+    .hero-heading{
+        font-size: clamp(2.3rem, 9vw, 3rem);
+    }
+
+    .couple-name{
+        font-size: clamp(2.2rem, 10vw, 3.3rem);
+    }
+
+    .hero-tagline{
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .event-date,
+    .hero-quote{
+        font-size: clamp(15px, 4vw, 18px);
+    }
+
+    #openInvitation{
+        width:100%;
+        max-width:360px;
+    }
 }
