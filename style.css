@@ -315,24 +315,15 @@ p{
     LOADING SCREEN
 =========================*/
 
-#loading-screen{
-
+#cover{
     position:fixed;
-
     inset:0;
-
     background:#081B33;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     z-index:10000;
-
     transition:1s;
-
 }
 
 .loader{
@@ -488,17 +479,13 @@ p{
 }
 
 .hero-content{
-
-    position:relative;
-
-    z-index:5;
-
-    width:100%;
-
-    max-width:430px;
-
-    margin:auto;
-
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    padding-top: 20px;
+    transform: translateY(-60px);
 }
 
 .hero-title{
@@ -507,18 +494,17 @@ p{
 
     letter-spacing:2px;
 
-    margin-bottom:10px;
+    margin-bottom:5px;
 
 }
 
 .hero-heading{
-
-    color:var(--gold);
-
-    margin-bottom:25px;
-
-    line-height:1.1;
-
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem;
+    font-weight:600;
+    color:#D4AF37;
+    letter-spacing:2px;
+    margin:15px 0 30px;
 }
 
 .couple-name{
@@ -533,7 +519,7 @@ p{
 
     color:#ffffff;
 
-    margin-bottom:20px;
+    margin-bottom:10px;
 
 }
 
@@ -571,7 +557,7 @@ p{
 
     font-size:18px;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
 
 }
 
@@ -583,7 +569,7 @@ p{
 
     color:var(--gold);
 
-    margin-bottom:20px;
+    margin-bottom:10px;
 
 }
 
@@ -591,7 +577,7 @@ p{
 
     font-style:italic;
 
-    margin-bottom:40px;
+    margin-bottom:20px;
 
 }
 
@@ -1821,4 +1807,50 @@ p{
         transform:scale(1.12);
         filter:drop-shadow(0 0 22px gold);
     }
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo img{
+    width: 110px;
+    height: auto;
+    display: block;
+}
+/* =========================
+   LOADING SCREEN
+========================= */
+
+#cover{
+    position: fixed;
+    inset: 0;
+    background: #081B33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s ease;
+}
+
+.cover-content{
+    text-align: center;
+}
+
+.cover-content p{
+    color: #ffffff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    margin-top: 20px;
+}
+
+.logo img{
+    width:220px;       /* Increase logo size */
+    max-width:80%;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+    filter:drop-shadow(0 0 12px rgba(212,175,55,.4));
 }
