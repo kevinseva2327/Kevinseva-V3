@@ -1777,3 +1777,48 @@ p{
     color:#FF5E8A;
 
 }
+.cover-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+    margin-top:30px;
+}
+
+.dove{
+    width:90px;
+    animation:doveGlow 3s ease-in-out infinite alternate;
+}
+
+.left-dove{
+    transform:translateX(12px);
+}
+
+.right-dove{
+    transform:translateX(-12px) scaleX(-1);
+}
+
+.ring-icon{
+    width:65px;
+    animation:ringGlow 2s infinite;
+}
+
+@keyframes doveGlow{
+    from{
+        filter:drop-shadow(0 0 5px rgba(255,255,255,.6));
+    }
+    to{
+        filter:drop-shadow(0 0 20px rgba(255,255,255,1));
+    }
+}
+
+@keyframes ringGlow{
+    0%,100%{
+        transform:scale(1);
+        filter:drop-shadow(0 0 6px gold);
+    }
+    50%{
+        transform:scale(1.12);
+        filter:drop-shadow(0 0 22px gold);
+    }
+}
