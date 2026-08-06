@@ -1809,16 +1809,15 @@ p{
     }
 }
 .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .logo img{
-    width: 110px;
-    height: auto;
-    display: block;
+    width:220px;
+    height:auto;
+    display:block;
 }
 /* =========================
    LOADING SCREEN
