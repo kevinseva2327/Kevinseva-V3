@@ -23,10 +23,7 @@ const backToTop = document.getElementById("backToTop");
 // INITIAL SETTINGS
 // ==========================================
 
-body.style.overflow = "auto";
-
-// The invitation opens directly on the hero page so the Open Invitation button is always reachable.
-loadingScreen.style.display = "none";
+body.style.overflow = "hidden";
 
 musicToggle.style.display = "none";
 
@@ -38,45 +35,41 @@ bgMusic.volume = 0;
 // LOADING SCREEN
 // ==========================================
 
-// Keep the cover visible until the visitor explicitly opens the invitation.
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+    loadingScreen.style.opacity = "0";
+
+    setTimeout(() => {
+
+        loadingScreen.style.display = "none";
+
+    },1000);
+
+},2000);
+
+});
 
 // ==========================================
 // OPEN INVITATION
 // ==========================================
 
-let invitationOpened = false;
-
-const openInvitationHandler = (event) => {
-
-    if (event.type === "touchend") {
-        event.preventDefault();
-    }
-
-    if (invitationOpened) return;
-
-    invitationOpened = true;
+openInvitation.addEventListener("click", () => {
 
     body.style.overflowY = "auto";
+
     musicToggle.style.display = "flex";
-
-    loadingScreen.style.opacity = "0";
-    loadingScreen.style.pointerEvents = "none";
-
-    setTimeout(() => {
-        loadingScreen.style.display = "none";
-    }, 650);
 
     document
         .getElementById("welcome-section")
         .scrollIntoView({
+
             behavior:"smooth"
+
         });
 
-    const playPromise = bgMusic.play();
-
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {});
-    }
+    bgMusic.play();
 
     let volume = 0;
 
@@ -87,6 +80,7 @@ const openInvitationHandler = (event) => {
         if(volume >= 0.40){
 
             volume = 0.40;
+
             clearInterval(fadeMusic);
 
         }
@@ -95,10 +89,7 @@ const openInvitationHandler = (event) => {
 
     },250);
 
-};
-
-openInvitation.addEventListener("click", openInvitationHandler);
-openInvitation.addEventListener("touchend", openInvitationHandler, { passive:false });
+});
 
 // ==========================================
 // MUSIC BUTTON
