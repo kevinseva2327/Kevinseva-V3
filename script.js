@@ -35,41 +35,45 @@ bgMusic.volume = 0;
 // LOADING SCREEN
 // ==========================================
 
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-    loadingScreen.style.opacity = "0";
-
-    setTimeout(() => {
-
-        loadingScreen.style.display = "none";
-
-    },1000);
-
-},2000);
-
-});
+// Keep the cover visible until the visitor explicitly opens the invitation.
 
 // ==========================================
 // OPEN INVITATION
 // ==========================================
 
-openInvitation.addEventListener("click", () => {
+let invitationOpened = false;
+
+const openInvitationHandler = (event) => {
+
+    if (event.type === "touchend") {
+        event.preventDefault();
+    }
+
+    if (invitationOpened) return;
+
+    invitationOpened = true;
 
     body.style.overflowY = "auto";
-
     musicToggle.style.display = "flex";
+
+    loadingScreen.style.opacity = "0";
+    loadingScreen.style.pointerEvents = "none";
+
+    setTimeout(() => {
+        loadingScreen.style.display = "none";
+    }, 650);
 
     document
         .getElementById("welcome-section")
         .scrollIntoView({
-
             behavior:"smooth"
-
         });
 
-    bgMusic.play();
+    const playPromise = bgMusic.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+    }
 
     let volume = 0;
 
@@ -80,7 +84,6 @@ openInvitation.addEventListener("click", () => {
         if(volume >= 0.40){
 
             volume = 0.40;
-
             clearInterval(fadeMusic);
 
         }
@@ -89,7 +92,10 @@ openInvitation.addEventListener("click", () => {
 
     },250);
 
-});
+};
+
+openInvitation.addEventListener("click", openInvitationHandler);
+openInvitation.addEventListener("touchend", openInvitationHandler, { passive:false });
 
 // ==========================================
 // MUSIC BUTTON
