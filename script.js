@@ -23,7 +23,10 @@ const backToTop = document.getElementById("backToTop");
 // INITIAL SETTINGS
 // ==========================================
 
-body.style.overflow = "hidden";
+body.style.overflow = "auto";
+
+// The invitation opens directly on the hero page so the Open Invitation button is always reachable.
+loadingScreen.style.display = "none";
 
 musicToggle.style.display = "none";
 
