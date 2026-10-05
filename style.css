@@ -2004,3 +2004,53 @@ p{
         max-width:360px;
     }
 }
+
+
+/* ==================================================
+   TAP BUTTON VISIBILITY FIX
+   Keeps the Open Invitation button visible and tappable
+   on short laptop/mobile screens without affecting
+   phone, WhatsApp, Maps or Waze links.
+================================================== */
+
+@media (max-height: 800px) and (min-width: 769px){
+    #hero-section{
+        min-height: 100vh;
+    }
+
+    .hero-content{
+        transform: scale(.82);
+        transform-origin: center center;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 769px){
+    .hero-content{
+        transform: scale(.72);
+    }
+}
+
+@media (max-height: 760px) and (max-width: 768px){
+    #hero-section{
+        min-height: 100svh;
+    }
+
+    .hero-content{
+        transform: scale(.84);
+        transform-origin: center center;
+    }
+}
+
+@media (max-height: 650px) and (max-width: 768px){
+    .hero-content{
+        transform: scale(.72);
+    }
+}
+
+/* Make sure the invitation button remains a real, touch-friendly button. */
+#openInvitation{
+    position:relative;
+    z-index:20;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+}
