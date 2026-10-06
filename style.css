@@ -2172,3 +2172,16 @@ p{
         transform:scale(.58) !important;
     }
 }
+
+
+/* FINAL: keep the Chromebook invitation completely still.
+   Disable the button pulse animation; no automatic movement. */
+#openInvitation{
+    animation:none !important;
+    transform:none !important;
+}
+
+#openInvitation:hover{
+    animation:none !important;
+    transform:none !important;
+}
