@@ -19,9 +19,34 @@ const openInvitation = document.getElementById("openInvitation");
  * button to the document body so it is not trapped inside the
  * hero section's layout/stacking context. Phone layout is untouched.
  */
-if (window.matchMedia("(hover:hover) and (pointer:fine)").matches && openInvitation) {
+if (openInvitation && window.innerWidth >= 769) {
     document.body.appendChild(openInvitation);
+
     openInvitation.classList.add("chromebook-fixed");
+
+    /* Use inline !important styles so Chromebook/Chrome cannot
+       hide the button behind the hero layout or cover. */
+    const buttonStyles = {
+        position: "fixed",
+        left: "50%",
+        bottom: "18px",
+        top: "auto",
+        right: "auto",
+        width: "360px",
+        maxWidth: "calc(100vw - 40px)",
+        margin: "0",
+        zIndex: "2147483647",
+        display: "block",
+        visibility: "visible",
+        opacity: "1",
+        pointerEvents: "auto",
+        transform: "translateX(-50%)",
+        touchAction: "manipulation"
+    };
+
+    Object.entries(buttonStyles).forEach(([property, value]) => {
+        openInvitation.style.setProperty(property, value, "important");
+    });
 }
 
 const musicToggle = document.getElementById("musicToggle");
