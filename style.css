@@ -2054,3 +2054,26 @@ p{
     touch-action:manipulation;
     -webkit-tap-highlight-color:transparent;
 }
+
+
+/* ==================================================
+   DESKTOP SHORT-SCREEN OPEN BUTTON
+   Keep the Open Invitation button visible on laptops
+   without changing phone/contact buttons.
+================================================== */
+@media (min-width: 769px) and (max-height: 850px){
+    #openInvitation{
+        position: fixed;
+        left: 50%;
+        bottom: 18px;
+        width: min(360px, 42vw);
+        max-width: 360px;
+        z-index: 10001;
+        transform: translateX(-50%) scale(.88);
+        margin: 0;
+    }
+
+    #openInvitation:hover{
+        transform: translateX(-50%) scale(.91);
+    }
+}
