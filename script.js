@@ -13,6 +13,17 @@ const loadingScreen = document.getElementById("cover");
 
 const openInvitation = document.getElementById("openInvitation");
 
+/*
+ * Chromebook / laptop fix:
+ * On devices with a mouse/trackpad, move ONLY the Open Invitation
+ * button to the document body so it is not trapped inside the
+ * hero section's layout/stacking context. Phone layout is untouched.
+ */
+if (window.matchMedia("(hover:hover) and (pointer:fine)").matches && openInvitation) {
+    document.body.appendChild(openInvitation);
+    openInvitation.classList.add("chromebook-fixed");
+}
+
 const musicToggle = document.getElementById("musicToggle");
 
 const bgMusic = document.getElementById("bgMusic");
