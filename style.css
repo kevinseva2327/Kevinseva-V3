@@ -2107,3 +2107,24 @@ p{
         transform: translateX(-50%) !important;
     }
 }
+
+
+/* Chromebook/laptop: keep the invitation button independent of the hero layout. */
+@media (hover:hover) and (pointer:fine){
+    #openInvitation.chromebook-fixed{
+        position:fixed !important;
+        left:50% !important;
+        bottom:18px !important;
+        top:auto !important;
+        right:auto !important;
+        width:360px !important;
+        max-width:calc(100vw - 40px) !important;
+        margin:0 !important;
+        z-index:2147483647 !important;
+        transform:translateX(-50%) !important;
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        pointer-events:auto !important;
+    }
+}
