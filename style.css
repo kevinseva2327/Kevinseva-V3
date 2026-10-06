@@ -2185,3 +2185,17 @@ p{
     animation:none !important;
     transform:none !important;
 }
+
+
+/* FINAL: completely disable invitation-button animation/movement */
+#openInvitation,
+#openInvitation:hover,
+#openInvitation:focus,
+#openInvitation:active{
+    animation:none !important;
+    transition:none !important;
+}
+
+#openInvitation{
+    transform:none !important;
+}
