@@ -1,3 +1,18 @@
+
+/* Custom illustrated icons for engagement programme */
+#programme-section .timeline-symbol{
+    display:flex;align-items:center;justify-content:center;
+    width:62px;height:62px;margin:0 0 14px;border-radius:50%;
+    background:linear-gradient(145deg,#fff8f5,#f5e4d5);
+    border:1px solid rgba(184,137,76,.35);color:#9B7445;
+    box-shadow:0 5px 14px rgba(115,75,56,.08);
+}
+#programme-section .timeline-symbol svg{display:block;width:42px;height:42px}
+@media(max-width:480px){
+ #programme-section .timeline-symbol{width:54px;height:54px}
+ #programme-section .timeline-symbol svg{width:36px;height:36px}
+}
+
 /*==================================================
     EVANGELLA ANNE ♥ KEVIN PONNIAH
     ENGAGEMENT INVITATION
