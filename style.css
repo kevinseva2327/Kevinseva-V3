@@ -1489,6 +1489,32 @@ p{
 
 }
 
+
+/* Engagement programme symbols */
+#programme-section .timeline-symbol{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:54px;
+    height:54px;
+    margin-bottom:12px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#fff0ed,#f8e5d0);
+    border:1px solid rgba(173,128,70,.3);
+    font-size:28px;
+    line-height:1;
+}
+#programme-section .timeline-content h3{
+    margin-top:0;
+}
+@media (max-width:480px){
+    #programme-section .timeline-symbol{
+        width:46px;
+        height:46px;
+        font-size:24px;
+    }
+}
+
 /*==================================================
     STEP 6
     COUNTDOWN
