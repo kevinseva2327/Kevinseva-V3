@@ -39,21 +39,25 @@ bgMusic.volume = 0;
 // LOADING SCREEN
 // ==========================================
 
-window.addEventListener("load", () => {
+function hideLoadingScreen() {
+    if (!loadingScreen || loadingScreen.dataset.dismissed === "true") return;
 
-    setTimeout(() => {
-
+    loadingScreen.dataset.dismissed = "true";
     loadingScreen.style.opacity = "0";
 
     setTimeout(() => {
-
         loadingScreen.style.display = "none";
+        body.style.overflow = "";
+    }, 1000);
+}
 
-    },1000);
-
-},2000);
-
-});
+// Hide the cover after the page loads, with a fallback in case a resource hangs.
+if (document.readyState === "complete") {
+    setTimeout(hideLoadingScreen, 2000);
+} else {
+    window.addEventListener("load", () => setTimeout(hideLoadingScreen, 2000), { once: true });
+    setTimeout(hideLoadingScreen, 4000);
+}
 
 // ==========================================
 // OPEN INVITATION
@@ -200,7 +204,7 @@ if (backToTop) {
 }
 
 // ==========================================
-// // FADE UP ANIMATION
+// FADE UP ANIMATION
 // ==========================================
 
 const fadeElements = document.querySelectorAll(
