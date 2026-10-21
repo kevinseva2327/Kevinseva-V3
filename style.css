@@ -1516,6 +1516,7 @@ p{
     border-radius:50%;
     background:linear-gradient(135deg,#fff0ed,#f8e5d0);
     border:1px solid rgba(173,128,70,.3);
+    font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;
     font-size:28px;
     line-height:1;
 }
