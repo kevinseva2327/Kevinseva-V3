@@ -29,7 +29,9 @@ body.style.overflow = "hidden";
 
 musicToggle.style.display = "none";
 
-backToTop.style.display = "none";
+if (backToTop) {
+    backToTop.style.display = "none";
+}
 
 bgMusic.volume = 0;
 
@@ -180,34 +182,25 @@ setInterval(updateCountdown,1000);
 // BACK TO TOP BUTTON
 // ==========================================
 
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY > 500){
-
-        backToTop.style.display = "flex";
-
-    }else{
-
-        backToTop.style.display = "none";
-
-    }
-
-});
-
-backToTop.addEventListener("click",()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
+if (backToTop) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+            backToTop.style.display = "flex";
+        } else {
+            backToTop.style.display = "none";
+        }
     });
 
-});
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
 
 // ==========================================
-// FADE UP ANIMATION
+// // FADE UP ANIMATION
 // ==========================================
 
 const fadeElements = document.querySelectorAll(
